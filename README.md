@@ -2,16 +2,13 @@
 
 把 Procreate 的 `.brushset` 笔刷转换成 Photoshop 的 `.abr` 笔刷文件。
 
-当前版本：v15
 
 ## 文件说明
 
 - `brushset2abr.py` —— 转换源码（需要 Python 3.9+ 和 Pillow）
-- `Images/` —— Procreate 内置材质库，源码运行时的必需依赖
 - `brushset2abr/` —— 打包好的 Windows 程序，双击 `brushset2abr.exe` 即用
   （已包含运行库和内置材质库）
 - `使用说明.md` —— 详细使用说明
-- `LICENSE` —— CC BY-NC 4.0（源自 Brush-Converter 项目，可自行调整）
 
 ## 快速开始
 
