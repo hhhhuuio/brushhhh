@@ -2,7 +2,6 @@
 
 把 Procreate 的 `.brushset` 笔刷转换成 Photoshop 的 `.abr` 笔刷文件。
 
-当前版本：v14
 
 ## 获取工具
 
