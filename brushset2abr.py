@@ -693,11 +693,14 @@ def procreate_spacing_percent(params):
 def procreate_texture_each_tip(params):
     """ABR 的 TxtC（纹理应用于每个笔尖）。
 
-    现在统一写 true：Procreate 大量笔刷的 textureApplication=0（纹理化），
-    如果原样转换，Photoshop 里就会变成“应用到整个笔画”，和用户实际想要
-    的材质笔触效果不符；逐笔尖应用才能保留每次盖章的纹理。
+    按 Procreate 笔刷自己的 textureApplication 决定，而不是全部勾选：
+      0 = Texturized（纹理化：颗粒固定在整个画布/笔画上）
+          -> PS 不勾选“为每个笔尖设置纹理”，纹理作用于整个笔画
+      1 = Moving（移动：颗粒跟着笔尖走）
+          -> PS 勾选“为每个笔尖设置纹理”，每次盖章单独应用
+    缺少该字段时按 0（Texturized / 整个笔画）处理。
     """
-    return True
+    return fnum(params, "textureApplication", 0.0) == 1.0
 
 
 def procreate_jitter_percent(value):
